@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>FutureTok</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      background: black;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+      color: white;
+    }
+
+    .feed {
+      height: 100vh;
+      overflow-y: scroll;
+      scroll-snap-type: y mandatory;
+    }
+
+    .video-card {
+      height: 100vh;
+      position: relative;
+      scroll-snap-align: start;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    video, img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    /* футуристичный градиент */
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 20px;
+      background: linear-gradient(transparent, rgba(0,0,0,0.9));
+    }
+
+    .username {
+      font-size: 18px;
+      font-weight: bold;
+      color: #00f7ff;
+      text-shadow: 0 0 10px #00f7ff;
+    }
+
+    .desc {
+      font-size: 14px;
+      margin-top: 5px;
+      opacity: 0.8;
+    }
+
+    /* кнопки справа */
+    .actions {
+      position: absolute;
+      right: 10px;
+      bottom: 100px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .btn {
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 50%;
+      padding: 10px;
+      text-align: center;
+      font-size: 18px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #00f7ff;
+      color: black;
+      box-shadow: 0 0 15px #00f7ff;
+    }
+
+    /* верхняя панель */
+    .top-bar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      text-align: center;
+      padding: 10px;
+      font-size: 20px;
+      font-weight: bold;
+      background: rgba(0,0,0,0.5);
+      backdrop-filter: blur(10px);
+      z-index: 10;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<div class="top-bar">🚀 FutureTok</div>
+
+<div class="feed">
+
+  <!-- Видео 1 -->
+  <div class="video-card">
+    <video src="https://www.w3schools.com/html/mov_bbb.mp4" autoplay loop muted></video>
+
+    <div class="overlay">
+      <div class="username">@neo_user</div>
+      <div class="desc">Будущее уже здесь 🔥</div>
+    </div>
+
+    <div class="actions">
+      <div class="btn">❤️</div>
+      <div class="btn">💬</div>
+      <div class="btn">🔗</div>
+    </div>
+  </div>
+
+  <!-- Фото 2 -->
+  <div class="video-card">
+    <img src="https://picsum.photos/500/900?random=1">
+
+    <div class="overlay">
+      <div class="username">@cyber_girl</div>
+      <div class="desc">Неоновый мир ✨</div>
+    </div>
+
+    <div class="actions">
+      <div class="btn">❤️</div>
+      <div class="btn">💬</div>
+      <div class="btn">🔗</div>
+    </div>
+  </div>
+
+  <!-- Фото 3 -->
+  <div class="video-card">
+    <img src="https://picsum.photos/500/900?random=2">
+
+    <div class="overlay">
+      <div class="username">@future_ai</div>
+      <div class="desc">AI + человек 🤖</div>
+    </div>
+
+    <div class="actions">
+      <div class="btn">❤️</div>
+      <div class="btn">💬</div>
+      <div class="btn">🔗</div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
